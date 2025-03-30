@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 191 91% 37%;  /* Cyan 600 */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 190 100% 32%; /* Cyan 700 */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 189 94% 43%; /* Cyan 500 */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 191 91% 37%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 191 91% 37%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 190 100% 32%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 189 94% 43%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 191 91% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for Chowk */
+@layer components {
+  .chowk-container {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+  
+  .chowk-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .chowk-button-primary {
+    @apply bg-chowk-primary hover:bg-chowk-secondary text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .chowk-button-secondary {
+    @apply bg-white border border-chowk-primary text-chowk-primary hover:bg-chowk-light font-semibold py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .chowk-input {
+    @apply border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-chowk-primary focus:border-transparent;
+  }
+  
+  .chowk-rating {
+    @apply flex items-center;
+  }
+  
+  .chowk-star {
+    @apply text-yellow-400;
+  }
+  
+  .chowk-tag {
+    @apply bg-chowk-light text-chowk-dark text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+}
