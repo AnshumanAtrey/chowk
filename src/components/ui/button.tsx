@@ -1,4 +1,7 @@
-import * as React from "react"
+console.log("Button component rendered")
+console.log("Button props:", props)
+console.log("Button variant:", variant)
+console.log("Button size:", size)import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
